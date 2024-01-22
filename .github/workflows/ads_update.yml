@@ -10,7 +10,7 @@ on:
 
 jobs:
   run-script:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest 
 
     steps:
     - name: Checkout code
@@ -22,7 +22,7 @@ jobs:
         python-version: '3.9'  
 
     - name: Install the 'ads' library
-      run: pip install ads os yaml glob numpy
+      run: pip install ads yaml glob numpy
 
     - name: Run the script
       run: |
