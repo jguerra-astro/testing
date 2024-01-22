@@ -1,0 +1,20 @@
+{
+    "scss.validate": false,
+    "files.exclude": {
+        "_site/**": true,
+        ".jekyll-cache/**": true,
+        "Gemfile.lock": true,
+        "group-site.gemspec": true,
+      },
+      "material-icon-theme.folders.associations": {
+        "_postdocs": "Content",
+        "_grads": "Content",
+        "_members": "Content",
+        "_undergrads": "Content",
+        "_research": "Content",
+        "_outreach": "Content",
+        "_pi": "Content",
+        "_layouts": "Constant",
+        "_includes": "Helper",
+      },
+}
