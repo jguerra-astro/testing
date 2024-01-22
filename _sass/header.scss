@@ -1,0 +1,19 @@
+.header-image {
+    position: relative;
+    text-align: center; /* Center align the title */
+}
+
+.header-image img {
+    background-size: cover; /* Covers the entire width, may cut off vertically */
+    background-position: center; /* Centers the image */
+    width: 100%;
+}
+
+.site-title {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    color: white; /* Choose a color that contrasts well with your image */
+    /* Add more styling as needed */
+}

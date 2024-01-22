@@ -1,0 +1,135 @@
+---
+title: Members
+permalink: /members/
+layout: page
+---
+
+<div class="container">
+    <h2 >Principal Investigator</h2>
+    {% for item in site.pi %}
+        <h3 >{{ item.title }}</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ item.image }}" alt="Descriptive Alt Text" class="img-fluid custom-card-img">
+            </div>
+            <div class="col-md-8">
+                <div class="text-div">
+                        {{ item.content }}
+                </div>
+            </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<h2> Postdocs</h2>
+
+<div class="container">
+    <div class="row">
+        {% for member in site.postdocs %}
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex mx-auto">
+                <div class="card flex-fill card-border">
+                    {% if member.external_url %}
+                        <a href="{{ member.external_url }}" class="card-link" target="_blank" rel="noopener noreferrer">
+                    {% else %}
+                        <a href="{{ site.baseurl }}{{ member.url }}" class="card-link">
+                    {% endif %}
+                        {% if member.image %}
+                            <img class="card-img-top custom-card-img" src="{{ member.image }}" alt="{{ member.title }}">
+                        {% endif %}
+                        <div class="card-body flex-grow-1">
+                            <h5 class="card-title">{{ member.title }}</h5>
+                            <div class="card-text">
+                                {{ member.text | markdownify }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<h2>Graduate Students</h2>
+
+<div class="container">
+    <div class="row">
+        {% for member in site.grads %}
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex mx-auto">
+                <div class="card flex-fill card-border">
+                    {% if member.external_url %}
+                        <a href="{{ member.external_url }}" class="card-link" target="_blank" rel="noopener noreferrer">
+                    {% else %}
+                        <a href="{{ site.baseurl }}{{ member.url }}" class="card-link">
+                    {% endif %}
+                        {% if member.image %}
+                            <img class="card-img-top custom-card-img" src="{{ member.image }}" alt="{{ member.title }}">
+                        {% endif %}
+                        <div class="card-body flex-grow-1">
+                            <h5 class="card-title">{{ member.title }}</h5>
+                            <div class="card-text">
+                                {{ member.text | markdownify }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<h2>Undergrads</h2>
+
+<div class="container">
+    <div class="row">
+        {% for member in site.undergrads %}
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex mx-auto">
+                <div class="card flex-fill card-border">
+                    {% if member.external_url %}
+                        <a href="{{ member.external_url }}" class="card-link" target="_blank" rel="noopener noreferrer">
+                    {% else %}
+                        <a href="{{ site.baseurl }}{{ member.url }}" class="card-link">
+                    {% endif %}
+                        {% if member.image %}
+                            <img class="card-img-top custom-card-img" src="{{ member.image }}" alt="{{ member.title }}">
+                        {% endif %}
+                        <div class="card-body flex-grow-1">
+                            <h5 class="card-title">{{ member.title }}</h5>
+                            <div class="card-text">
+                                {{ member.text | markdownify }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<h2>Past Members</h2>
+
+<div class="container">
+    <div class="row">
+        {% for member in site.pastmembers %}
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex mx-auto">
+                <div class="card flex-fill card-border">
+                    {% if member.external_url %}
+                        <a href="{{ member.external_url }}" class="card-link" target="_blank" rel="noopener noreferrer">
+                    {% else %}
+                        <a href="{{ site.baseurl }}{{ member.url }}" class="card-link">
+                    {% endif %}
+                        {% if member.image %}
+                            <img class="card-img-top custom-card-img" src="{{ member.image }}" alt="{{ member.title }}">
+                        {% endif %}
+                        <div class="card-body flex-grow-1">
+                            <h5 class="card-title">{{ member.title }}</h5>
+                            <div class="card-text">
+                                {{ member.text | markdownify }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,48 @@
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+// add padding to card image
+.card-img-top {
+    padding: 15px;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    flex-grow: 1; 
+}
+
+
+.card-link {
+    text-decoration: none; 
+    color: inherit; /* Keeps the text color consistent */
+}
+
+.card-link:hover {
+    cursor: pointer; 
+}
+
+
+.card-border {
+    border: 1px solid #d0d0d0; /* Adjust color, width, and style as needed */
+    padding: 15px; /* Optional: for spacing inside the card */
+    margin-bottom: 20px; /* Optional: for spacing between cards */
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.custom-card-img {
+    width: 100%; /* or any specific value */
+    height: auto; /* maintain aspect ratio */
+    object-fit: cover; /* this ensures the image covers the area nicely */
+}
+
+.max_card{
+    max-width: 400px; /* Adjust the max width as needed */
+    // margin: 10%; /* Centers the card in the column */
+}

@@ -1,0 +1,21 @@
+---
+layout: default
+title: Outreach & Teaching
+permalink: /outreach/
+---
+
+<div class="container">
+    {% for outreach in site.outreach %}
+    <h2>{{ outreach.title }}</h2>
+        <div class="row" id="{{outreach.title}}">
+            <div class="col-md-8">
+                <div class="text-div">
+                    <p>{{ outreach.content }}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ outreach.image | relative_url }}" alt="{{ outreach.title }}" class="img-fluid">
+            </div>
+        </div>
+    {% endfor %}
+</div>

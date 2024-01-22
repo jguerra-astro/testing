@@ -1,0 +1,99 @@
+/* Navbar Customization */
+.navbar.navbar-expand-lg {
+    background-color: transparent; /* Replace with your desired color */
+    position: relative;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-brand {
+    font-size: 1.5em; /* Increase font size */
+    color: #fff; /* Change color */
+}
+
+.navbar-nav .nav-link {
+    color: rgb(28, 18, 211); /* Replace with your desired color */
+    position: relative;
+    padding-left: 30px; /* Adjust spacing */
+    padding-right: 30px; /* Adjust spacing */
+}
+
+.nav-item.active .nav-link {
+    color: #007bff; /* Change this to your preferred 'active' color */
+    font-weight: bold; /* Example of additional styling */
+}
+
+.navbar-nav .nav-link:hover {
+    background: #a6a2a2;
+    color: #ffffff;
+}
+
+@media (min-width: 768px) { /* Adjusts for Bootstrap's default breakpoint for navbar-expand-lg */
+    .navbar-nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-nav .nav-item {
+        flex: 0 0 auto;
+    }
+}
+
+.navbar-wrapper {
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    --line-left: 0px;
+    --line-right: 0px;
+}
+
+.navbar-wrapper::before,
+.navbar-wrapper::after {
+    content: '\a0';
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    height: 1px;
+    width: 30%; /* Adjust this if you want longer lines */
+    background-color: #d0d0d0;
+    transform: translateY(-50%);
+}
+
+.navbar-wrapper::before {
+    left: 10px; /* Adjust this to position the line relative to the first item */
+}
+
+.navbar-wrapper::after {
+    right: 10px; /* Adjust this to position the line relative to the last item */
+}
+
+/* Adjust or hide lines for screens smaller than 992px */
+@media (max-width: 992px) {
+    .navbar-wrapper::before,
+    .navbar-wrapper::after {
+        display: none;
+    }
+}
+@media (min-width: 993px) {
+    .navbar-wrapper::before {
+        left: calc(-105px + (960px - 100%) / 2); /* Adjust based on the new container width */
+    }
+
+    .navbar-wrapper::after {
+        right: calc(-105px + (960px - 100%) / 2);
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-wrapper::before {
+        left: calc(-100px + (1200px - 100%) / 2); /* Adjust based on the new container width */
+    }
+
+    .navbar-wrapper::after {
+        right: calc(-100px + (1200px - 100%) / 2);
+    }
+}

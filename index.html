@@ -1,0 +1,94 @@
+---
+title: Home
+layout: default
+---
+
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <div class="text-div">
+                <p>
+                    Welcome to the Geha Research Group at <a href="https://www.yale.edu" target="_blank">Yale University</a> in the Department of <a href="https://astronomy.yale.edu" target="_blank">Astronomy</a>. 
+                    We are focused on understanding low mass galaxies around our Milky Way, in the Local Group and in the nearby Universe.
+                    Dwarf galaxies are the dominate type of galaxy in the Universe by number.
+                    Dwarf galaxies are less luminous and more dark-matter dominated as compared to our Milky Way, providing significant constraints on galaxy formation 
+                    processes, cosmology and the nature of dark matter. 
+                    We have weekly group meetings and graduate and undergraduate students are welcome. 
+                    See opportunities and advice to get involved. 
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ '/assets/images/keck.jpg' | relative_url }}" alt="Descriptive Alt Text" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<h2 >Research Interests</h2>
+
+<div class="container">
+    <div class="row">
+        {% for card in site.research %}
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex mx-auto">
+                <div class="card flex-fill">
+                    {% if card.external_url %}
+                        <a href="{{ card.external_url }}" class="card-link" target="_blank" rel="noopener noreferrer">
+                    {% else %}
+                        <a href="{{ 'research' | relative_url}}" class="card-link">
+                    {% endif %}
+                    {% if card.image %}
+                        <img class="card-img-top" src="{{ card.image }}" alt="{{ card.title }}">
+                    {% endif %}
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">{{ card.title }}</h5>
+                        <div class="card-text">
+                            {{ card.text | markdownify }}
+                    </div>
+                </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<h2 >Outreach & Teaching</h2>
+
+<div class="container justify-content-center">
+    <div class="row">
+        {% for card in site.outreach %}
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex mb-3 mx-auto">
+                <div class="card flex-fill max_card">
+                    {% if card.external_url %}
+                    <a href="{{ card.external_url }}" class="card-link" target="_blank" rel="noopener noreferrer">
+                    {% else %}
+                        <!-- <a href="{{ site.baseurl }}{{ card.url }}" class="card-link"> -->
+                        <a href="{{ 'outreach' | relative_url}}#{{card.title}}"" class="card-link">
+                    {% endif %}
+                    {% if card.image %}
+                        <img class="card-img-top" src="{{ card.image }}" alt="{{ card.title }}">
+                    {% endif %}
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">{{ card.title }}</h5>
+                        <div class="card-text">
+                            {{ card.text | markdownify }}
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<h2 >Recent work</h2>
+
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <div class="markdown-content">
+                {% include recent_work.md %}
+            </div>
+        </div>
+</div>
