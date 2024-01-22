@@ -28,7 +28,7 @@ jobs:
 
     - name: Run the script
       run: |
-        python scripts/ads_update.py  # Replace with the path to your script file
+        python scripts/get_ads.py  # Replace with the path to your script file
 
     - name: push changes
       run: |
