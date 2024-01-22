@@ -66,7 +66,7 @@ layout: default
                         <a href="{{ 'outreach' | relative_url}}#{{card.title}}"" class="card-link">
                     {% endif %}
                     {% if card.image %}
-                        <img class="card-img-top" src="{{ card.image }}" alt="{{ card.title }}">
+                        <img class="card-img-top" src="{{ card.image | prepend:site.baseurl}}" alt="{{ card.title }}">
                     {% endif %}
                     <div class="card-body flex-grow-1">
                         <h5 class="card-title">{{ card.title }}</h5>
