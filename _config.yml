@@ -1,5 +1,6 @@
 title: Geha Group
 website: https://jguerra-astro.github.io
+baseurl: "/testing"
 collections:
   pi:
     output: true
