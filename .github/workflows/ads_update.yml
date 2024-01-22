@@ -23,8 +23,8 @@ jobs:
 
     - name: Install the 'ads' library
       run: |
-      pip install --upgrade pip
-      pip install ads yaml glob numpy
+        pip install --upgrade pip
+        pip install ads yaml glob numpy
 
     - name: Run the script
       run: |
