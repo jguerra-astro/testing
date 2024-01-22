@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "name"
+title: "Juan Guerra"
 image: "/assets/images/image.jpeg"
 # external_url: https://burke86.github.io
 text: |
