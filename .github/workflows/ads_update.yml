@@ -1,0 +1,35 @@
+name: Run Script with ads on Push and Daily Schedule
+
+on:
+  push:
+    branches:
+      - main
+
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight every day
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest 
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'  
+
+    - name: Install the 'ads' library
+      run: pip install ads os yaml glob numpy
+
+    - name: Run the script
+      run: |
+        python scripts/ads_update.py  # Replace with the path to your script file
+
+    - name: push changes
+      run: |
+        git add *.bib
+        git -c user.name='juan.guerra' -c user.email='juan.guerra@yale.edu' commit -m "updating bib file"
+        git push origin main
