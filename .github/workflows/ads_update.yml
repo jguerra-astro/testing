@@ -42,8 +42,8 @@ jobs:
     - name: push changes
       if: steps.git-check.outputs.changes == 'true'
       run: |
-        git pull origin master
+        git pull origin main
         git add *.bib
         git commit -m "updating bib file"
         
-        git push origin master
+        git push origin main
