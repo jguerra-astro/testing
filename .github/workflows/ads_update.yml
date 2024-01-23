@@ -33,6 +33,7 @@ jobs:
     - name: Check for changes
       id: git-check
       run: |
+        ls scripts
         git config --global user.email 'juan.guerra@yale.edu'
         git config --global user.name 'jguerra-astro'
         git add -A
