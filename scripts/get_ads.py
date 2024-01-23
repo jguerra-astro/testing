@@ -74,7 +74,7 @@ def main():
     names = [name.split(' ') for name in names]
     names = ['^'+name[-1]+', '+name[0] for name in names]
     sorted_names = sorted(names)
-    make_bib(sorted_names,outfile='most_recent_all.bib')
+    make_bib(sorted_names,outfile='scripts/most_recent_all.bib')
 
 
 if __name__ == "__main__":
